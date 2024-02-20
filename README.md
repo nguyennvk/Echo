@@ -8,10 +8,11 @@ The program can custom the delay and the volume of the echo.
    	addecho [OPTION]...[FILENAME]...[FILENAME]
 
 #DESCRIPTION
-Using an input audio file, addecho generates a new file as output with additional echo. The delay option dictates the timing of this echo. The volume of the echo is also open for modification –this is done through the volume option. Wav files are stored as a short sequence representing the air pressure. Wav files can have multiple sampling rates: 11025 (voice quality), 22050, and 44100 (CD quality) with different modes mono and stereo. To make sure the program works correctly, the input file should be mono.
+	Using an input audio file, addecho generates a new file as output with additional echo. The delay option dictates the timing of this echo. The volume of 	the echo is also open for modification –this is done through the volume option. Wav files are stored as a short sequence representing the air pressure. Wav 	files can have multiple sampling rates: 11025 (voice quality), 22050, and 44100 (CD quality) with different modes mono and stereo. To make sure the program 	works correctly, the input file should be mono.
 
 	-d,  —delay=SAMPLE
-	Default to 8000, number of samples delayed until echo is played. To determine the delay time divide delay by the sample rate. If SAMPLE exceeds the number 	of samples in the input file, the excess space will be filled with 0.
+	Default to 8000, number of samples delayed until echo is played. To determine the delay time divide delay by the sample rate. 
+ 	If SAMPLE exceeds the number 	of samples in the input file, the excess space will be filled with 0.
 	-v, –volume=VOLUME
  	Default to 4, after “delay” number samples, the program will add the current byte with the byte that is at delay samples before the current byte. Before 	adding to the current byte, the before byte is scaled down by VOLUME. 
 
